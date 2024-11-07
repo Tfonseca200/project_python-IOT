@@ -11,7 +11,7 @@ def config():
 def conectar_api():
     token = config()
 
-    produto = str(input('Produto a ser avaliado '))
+    produto = str(input('Produto a ser avaliado: '))
     quantidade = str(input('Quantos produtos quer que apareça? '))
 
     url = f"https://api.mercadolibre.com/sites/MLB/search?q={produto}&limit={quantidade}"
@@ -33,7 +33,7 @@ def consulta_produto(body):
 Nome: {produto['title']}
 Valor: R$ {produto['price']}
 
-Link: {produto['permalink']}
+Link do produto: {produto['permalink']}
 -----------------------------
                     '''
                 )
